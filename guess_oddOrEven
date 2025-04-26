@@ -1,0 +1,17 @@
+import random
+
+random_number = random.randint(1, 100)
+guess = input('Guess even or odd: ')
+if random_number % 2 == 0 and guess == 'even:':
+    print(f'You guessed correctly!{random_number}')
+elif random_number % 2 != 0 and guess == 'odd':
+    print(f'You guessed correctly! {random_number}')
+else:
+    print(f'Wrong {random_number}')
+# The code above is a simple number guessing game where the user has to guess if a randomly generated number is even or odd.
+# The code uses the random module to generate a random number between 1 and 100.
+# The user is prompted to input their guess, and the program checks if the guess is correct or not.
+# The program then prints the result of the guess and the randomly generated number.
+# The code is simple and easy to understand, making it a good example for beginners learning Python.
+# The code could be improved by adding error handling for invalid inputs and allowing the user to play multiple rounds.
+# Overall, the code is a good starting point for a number guessing game and can be expanded upon with additional features.
