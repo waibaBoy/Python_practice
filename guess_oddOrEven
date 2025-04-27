@@ -1,23 +1,34 @@
 import random
 
-lives = 5
-point = 0
 
-print("--------------------------------------------------------------------")
-print("Welcome to the Odd or Even Guessing Game!")
-print("You have 5 lives to guess if the number is odd or even.")
-print("If you guess correctly, you gain a point. If not, you lose a life.")
-while lives> 0:
-    random_number = random.randint(1, 100)
-    guess = input("Guess if the number is odd or even (o/e): ").lower()
-    if random_number % 2 == 0 and guess == "e":
-        print(f"Correct! The number was {random_number}.")
-        point += 1
-    elif random_number % 2 != 0 and guess == "o":
-        print(f"Correct! The number was {random_number}.")
-        point += 1
-    else:
-        print(f'Wrong! The number was {random_number}.')
-        lives -= 1
-    print(f'You have {lives} lives left.')
-print(f'You have {point} points.')
+# This is a simple odd or even guessing game.
+# The player has 5 lives to guess if the number is odd or even.
+def play_game():
+    lives = 5
+    point = 0
+
+    print("--------------------------------------------------------------------")
+    print("Welcome to the Odd or Even Guessing Game!")
+    print("You have 5 lives to guess if the number is odd or even.")
+    print("If you guess correctly, you gain a point. If not, you lose a life.")
+    while lives> 0:
+        random_number = random.randint(1, 100)
+        guess = input("Guess if the number is odd or even (o/e): ").lower()
+        if random_number % 2 == 0 and guess == "e":
+            print(f"Correct! The number was {random_number}.")
+            point += 1
+        elif random_number % 2 != 0 and guess == "o":
+            print(f"Correct! The number was {random_number}.")
+            point += 1
+        else:
+            print(f'Wrong! The number was {random_number}.')
+            lives -= 1
+        print(f'You have {lives} lives left.')
+    print(f'You have {point} points.')
+
+while True:
+    play_game()
+    ask = input("Do you want to play again? (y/n): ").lower()
+    if ask != "y":
+        print("Thanks for playing!")
+        break
