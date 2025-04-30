@@ -22,7 +22,7 @@ def take_quiz():
                 print("Correct!")
                 points += 1
             else:
-                print(f"Wrong! The correct answer is {correct_answer}.")
+                print(f"Wrong! The correct answer is {correct_answer}.")4
         elif random_operation == "*":
             correct_answer = random_num1 * random_num2
             if answer == correct_answer:
